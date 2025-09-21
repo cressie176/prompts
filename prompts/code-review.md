@@ -9,7 +9,7 @@ Remember:
 - Be VERY CAREFUL to add appropriate line feeds. You occasionally miss them.
 
 ## Code Review Process
-1. Fetch the latest @code-standards
+1. Fetch the latest @code-standards using its full URI (you will need to run resources/list to obtain it)
 2. Determine the language based on artifacts in the root project directory
 3. Ask what files you should review by presenting the following list of options each on separate lines
   - (u) Unstaged files
