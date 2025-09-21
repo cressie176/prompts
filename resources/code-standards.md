@@ -2,7 +2,7 @@
 
 These rules exist to make code clear, consistent, and maintainable.
 Follow them as instructions, not suggestions.
-NEVER complain about violations that are unavoidable due to 3rd party code.
+All developers to ignore rules with a explanatory comment
 
 ---
 
@@ -16,10 +16,12 @@ NEVER complain about violations that are unavoidable due to 3rd party code.
 ## 2. Functions
 - Function names must use verbs to describe the action.
 - Functions should minimise parameters, using ideally no more than two.
+  - NEVER apply this rule to functions to 3rd party functions.
 - Functions should eschew boolean parameters since they lead to conditional logic.
 - Functions should be small and focused on one task only, ideally contain no more than **6 significant executable statements**.
   - Statements that are inlined into function calls are NOT significant
   - Statements that are inlined into map values are NOT significant
+  - Fluid APIs / Chained calls count as a single statement
 - Functions must not cause hidden side effects.
 - Functions should operate at a single level of abstraction
   - A function must either describe *what* happens (high-level) or *how* it happens (low-level), but not both.
@@ -40,7 +42,7 @@ NEVER complain about violations that are unavoidable due to 3rd party code.
   - The request originator (UI, API client, calling service) usually knows what outcome they want.
   - If the originator is explicit, no conditional logic is needed in the application.
   - If conditionals exist, they often mean the originator delegated a decision it should have made.
-
+- Allow conditional logic in Factories
 ---
 
 ## 4. Comments
