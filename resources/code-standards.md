@@ -31,6 +31,7 @@ All developers to ignore rules with a explanatory comment
 ---
 
 ## 3. Conditional Logic
+- Ignore this rule when using the Factory pattern
 - Avoid `else` blocks and nested conditionals.
 - Use guard clauses (early return) instead.
 - Do not use boolean parameters or boolean state variables; they invite conditionals.
@@ -42,7 +43,6 @@ All developers to ignore rules with a explanatory comment
   - The request originator (UI, API client, calling service) usually knows what outcome they want.
   - If the originator is explicit, no conditional logic is needed in the application.
   - If conditionals exist, they often mean the originator delegated a decision it should have made.
-- Allow conditional logic in Factories
 ---
 
 ## 4. Comments
