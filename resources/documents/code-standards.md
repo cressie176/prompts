@@ -29,6 +29,8 @@ It is CRITICAL that you adhere to any preconditions before applying rules
   - Functions should eschew boolean parameters since they lead to conditional logic.
   - Functions should be small and focused on one task only, ideally contain no more than 8 meaningful lines of code.
     - Do NOT count the function signature
+    - Do NOT count blank lines
+    - Do NOT count comments
     - Do NOT count try/catch
     - Do NOT count statements that are inlined into function calls
     - Do NOT count statements that are inlined into map values

@@ -1,8 +1,9 @@
 {
   "resources": [
-    { "name": "code-standards", "description": "The latest ACME coding standards" }
+    { "name": "code-standards", "path": "documents/code-standards.md", "description": "The latest ACME coding standards" },
+    { "name": "code-review-template.jsx", "path": "templates/code-review.jsx", "description": "A code review template" }
   ],
   "prompts": [
-    { "name": "code-review", "description": "Requests a code review" }
+    { "name": "code-review", "path": "code-review.md", "description": "Requests a code review" }
   ]
 }
