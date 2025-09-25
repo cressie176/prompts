@@ -3,29 +3,30 @@
 Perform a code review using the defined code review process.
 
 Remember:
-- MINIMISE flagging false positives. It is better to say nothing than undermine the review with bad feedback.
+- CRITICAL!!! Minimse false positives. It is better to say nothing than undermine the review with bad feedback.
 - NEVER volunteer feedback that is not based on the @code-standards.
 - ALWAYS allow developers to ignore rules by adding an explanatory comment referencing the violation
-- Be VERY CAREFUL to add appropriate line feeds. You occasionally miss them.
+- Be VERY CAREFUL to add appropriate line breaks.
 
 ## Code Review Process
 1. Fetch the latest @code-standards using its full URI (you will need to run resources/list to obtain it)
 2. Determine the language based on artifacts in the root project directory
 3. Ask what files you should review by presenting the following list of options each on separate lines
-  - (u) Unstaged files${LINE BREAK}
-  - (s) Staged files${LINE BREAK}
-  - (b) Both unstaged & staged files${LINE BREAK}
-  - (e) Everything${LINE BREAK}
+  - (u) Unstaged files\n
+  - (s) Staged files\n
+  - (b) Both unstaged & staged files\n
+  - (e) Everything\n
 4. Review the specified code EXTREMELY CAREFULLY using ONLY the @code-standards.
+  - NEVER provide feedback on anything which isnt in the @code-standards
   - Exclude code in gitignored folders
-5. Capture, but do not show the following data for each violation:
+5. Capture, but do not yet show the following data for each violation:
   - file path
   - line number
   - category (use the headings in the @code-standards)
   - code snippet
   - explanation
   - recommendation
-6. Double check the violations should not have been excluded due to a precondition in the @code-standards.
+6. CRITICAL!!! Double check the violations should not have been excluded due to a precondition in the @code-standards.
 7. Prepare a closing summary including
   - A list of strengths
   - A list of improvements
@@ -41,12 +42,9 @@ Remember:
 - Format each violation as follows:
   - Horizontal line for at least 80 characters
   - 🚨${file}:${line}:${violation}
-  - ${code snippet}
-  - ${LINE BREAK}
-  - Explanation: ${explanation}${LINE BREAK}
-  - Recommendation: ${recommendation}${LINE BREAK}
-  - ${LINE BREAK}
-  - ${LINE BREAK}
+  - ${code snippet}\n
+  - Explanation: ${explanation}\n
+  - Recommendation: ${recommendation}\n
 - Summarise the review as follows:
   - List the "✅ Strengths" and "🔧 Areas for Improvement" (assuming there are some)
   - Finish with a score out of 10. If the score >= 9 celebrate with uplifting ASCII art

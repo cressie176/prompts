@@ -35,7 +35,9 @@ It is CRITICAL that you adhere to any preconditions before applying rules
     - Do NOT count statements that are inlined into function calls
     - Do NOT count statements that are inlined into map values
     - Do NOT count logging calls
-  - Count fluid APIs and chained calls count as a single statement
+    - Count fluid APIs and chained calls count as a single statement
+    - Count Array literal initialisation as a single statement
+    - Count Object literal initialisation as a single statement
   - Functions must not cause hidden side effects.
   - Functions should operate at a single level of abstraction
     - A function must either describe *what* happens (high-level) or *how* it happens (low-level), but not both.
